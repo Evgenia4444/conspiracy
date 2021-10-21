@@ -1,3 +1,15 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'promo/index'
+  resources :posts
+  get 'admin/index'
+  get 'main/index'
+	get 'posts/index'
+
+  
+  root 'posts#index'
+  
+  resources :posts do
+    resources :comments
+  end
+  
 end
