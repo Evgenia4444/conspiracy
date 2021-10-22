@@ -8,14 +8,14 @@
 
 
 
+        <% @posts.each do |post| %>
 <div class="post">
     <div class="post_contentFull">
 
-        <% @posts.each do |post| %>
 
         <div class="post_additional">
         <p><%= post.created_at %></p>
-        <p><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <button><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
         </div>
 
         <p class='post_author'><%= post.postauthor %></p>
@@ -27,14 +27,13 @@
         </div>
 
 
-        <% end %>
     </div>
 
 
     <div class="comments">
 
     <div class="comments_action">
-        <%= render "comments/form" %>
+        <%# <%= render "comments/form" %> %>
         <button class="comment_publish"></button>
     </div>
 
@@ -46,6 +45,7 @@
 
 
 </div>
+        <% end %>
 
 </div>
 </section>
