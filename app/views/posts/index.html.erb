@@ -1,30 +1,53 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
 
-<table>
-<thead>
-<tr>
-<th>Author</th>
-<th>Content</th>
-<th colspan="3"></th>
-</tr>
-</thead>
 
-<tbody>
-<% @posts.each do |post| %>
-<tr>
+<section class="posts">
+<div class="posts_container">
+<button class='post_creation_action'><%= link_to 'Создать пост', new_post_path %></button>
 
-<td><%= post.postauthor %></td>
-<td><%= post.content %></td>
-<td><%= link_to 'Show', post %></td>
-<td><%= link_to 'Edit', edit_post_path(post) %></td>
-<td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-</tr>
-<% end %>
-</tbody>
-</table>
 
-<br>
 
-<%= link_to 'New Post', new_post_path %>
+<div class="post">
+    <div class="post_contentFull">
+
+        <% @posts.each do |post| %>
+
+        <div class="post_additional">
+        <p><%= post.created_at %></p>
+        <p><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        </div>
+
+        <p class='post_author'><%= post.postauthor %></p>
+        <p class='post_content'><%= post.content %></p>
+
+        <div class="post_actions">
+        <p><%= link_to 'Show', post %></p>
+        <p><%= link_to 'Edit', edit_post_path(post) %></p>
+        </div>
+
+
+        <% end %>
+    </div>
+
+
+    <div class="comments">
+
+    <div class="comments_action">
+        <%= render "comments/form" %>
+        <button class="comment_publish"></button>
+    </div>
+
+    <div class="comments_list">
+        
+    </div>
+
+    </div>
+
+
+</div>
+
+</div>
+</section>
+
+

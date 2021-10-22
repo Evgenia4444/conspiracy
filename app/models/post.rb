@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
-    validates :name, :presence => true
-    validates :title, :presence => true,
+    validates :postauthor, :presence => true
+    validates :content, :presence => true,
                                         :length => { :minimum => 5 }
 
     has_many :comments, :dependent => :destroy

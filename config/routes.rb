@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
   
   get 'promo/index'
-  resources :posts
+  
   get 'admin/index'
   get 'main/index'
 	get 'posts/index'
@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   
   root 'posts#index'
   
-  
+ 
   
 end
