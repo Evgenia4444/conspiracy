@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  resources :posts do
+    resources :comments
+  end
+  
   get 'promo/index'
   resources :posts
   get 'admin/index'
@@ -8,8 +13,6 @@ Rails.application.routes.draw do
   
   root 'posts#index'
   
-  resources :posts do
-    resources :comments
-  end
+  
   
 end

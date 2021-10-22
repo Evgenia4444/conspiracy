@@ -1,3 +1,55 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&display=swap');
+@import 'reset.css';
+
+.posts{
+    background-color: #292929;
+     
+   &_container {
+       margin: 40px 60px;
+
+       .post_creation_action {
+           float: right;
+           background-color: #C4C4C4;
+           color: #1B1D1A;
+           font-size: 16px;
+           border: none;
+           border-radius: 2px;
+           padding: 8px 16px;
+           
+       }
+       
+   }
+}
+
+.post {
+    width: 900px;
+    background-color: #C4C4C4;
+    padding: 24px 56px 56px;
+    font-family: 'Open Sans', sans-serif;
+    color: #1B1D1A;
+    &_additional {
+        margin-bottom: 24px;
+        justify-content: space-between;
+        font-size: 14px;
+       
+    }
+
+    &_author {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 24px;
+    }
+
+    &_content {
+        font-size: 22px;
+        font-weight: regular;
+    }
+
+    &_actions {
+
+    }
+}
