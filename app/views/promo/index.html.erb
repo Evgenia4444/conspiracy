@@ -162,22 +162,31 @@
         color: #8CC64E;
       }
       .section1_p2 {
-        font-family: Gosha Regular;
+        font-family: "Gosha Regular";
         font-size: 36px;
         margin-top: 21px;
-        color: #9A2EA9;
+
+        a {
+          color: #9A2EA9;
+        }
       }
       .section1_p3 {
-        font-family: Gosha Ultralight;
+        font-family: "Gosha Ultralight";
         font-size: 36px;
         margin-top: 21px;
-        color: #9A2EA9;
+
+        a {
+          color: #9A2EA9;
+        }
       }
       .section1_p4 {
-        font-family: Gosha Ultralight;
+        font-family: "Gosha Ultralight";
         font-size: 36px;
         margin-top: 21px;
-        color: #9A2EA9;
+
+        a {
+          color: #9A2EA9;
+        }
       }
       .section2_p1 {
         position: relative;
@@ -540,9 +549,9 @@
     <div class="section1">
       <div id="grid_section1" class="">
         <div class="section1_p1">квазоид</div>
-        <div class="section1_p2">промо</div>
-        <div class="section1_p3">о нас</div>
-        <div class="section1_p4">посты</div>
+        <div class="section1_p2"><a href="/promo/index">промо</a></div>
+        <div class="section1_p3"><a href="/about/index">о нас</a></div>
+        <div class="section1_p4"><%= link_to "посты", posts_path %></div>
       </div>
     </div>
 
@@ -621,9 +630,9 @@
     <div class="section1">
       <div id="grid_section1" class="">
         <div class="section1_p1">квазоид</div>
-        <div class="section1_p2">промо</div>
-        <div class="section1_p3">о нас</div>
-        <div class="section1_p4">посты</div>
+        <div class="section1_p2"><a href="/promo/index">промо</a></div>
+        <div class="section1_p3"><a href="/about/index">о нас</a></div>
+        <div class="section1_p4"><%= link_to "посты", posts_path %></div>
       </div>
     </div>
 

@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
   resources :posts do
-    resources :comments
+    resources :commentts
   end
   
   get 'promo/index'
+  get 'about/index'
   
   get 'admin/index'
   get 'main/index'
