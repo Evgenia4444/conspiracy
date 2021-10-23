@@ -1,11 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&display=swap');
 @import 'reset.css';
 
+
+.section1 {
+    position: relative;
+    margin: 0px;
+    background-color: #1B1D1A;
+    height: 85px;
+    width: 100%;
+  }
+  #grid_section1 {
+    display: grid;
+    grid-template-columns: 62% 1fr 1fr 1fr;
+    grid-template-rows: 85px;
+    grid-gap: 52px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 0px;
+    margin-bottom: 0px
+  }
+  #grid > div {
+    padding: 0px;
+    /* background: gold; */
+    text-align: left;
+  }
+
+  .section1_p1 {
+    font-family: Gosha Regular;
+    font-size: 48px;
+    margin-top: 15px;
+    color: #D82C2C;
+  }
+  .section1_p2 {
+    font-family: Gosha Ultralight;
+    font-size: 36px;
+    margin-top: 21px;
+    
+    a {
+      color: #D82C2C;
+      
+      
+    }
+  }
+  .section1_p3 {
+    font-family: Gosha Regular;
+    font-size: 36px;
+    margin-top: 21px;
+    
+    a {
+      color: #D82C2C;
+    }
+  }
+  .section1_p4 {
+    font-family: Gosha Ultralight;
+    font-size: 36px;
+    margin-top: 21px;
+    
+    a {
+      color: #D82C2C;
+    }
+  }
+
+  
 .posts{
     background-color: #292929;
      height: 100%;
      width: 100%;
      font-family: 'Open Sans', sans-serif;
+     
    &_container {
       padding: 40px 60px;
 
@@ -49,6 +111,7 @@
             font-weight: bold;
             background: none;
             border: none;
+            color: #1B1D1A;
 
             &:hover {
                 color: #1B1D1A;
@@ -68,6 +131,7 @@
         font-size: 22px;
         font-weight: regular;
         line-height: 1.2;
+        margin-bottom: 10px;
     }
 
     &_actions {
@@ -79,10 +143,19 @@
         font-size: 14px;
         color: #1B1D1A;
 
-        :hover {
+        button {
+            text-decoration: none;
+            color: #1B1D1A;
             font-weight: bold;
-            border-bottom: 1px solid ;
+            background: none;
+            border: none;
+            color: #1B1D1A;
+
+            &:hover {
+                color: rgba($color: #1B1D1A, $alpha: 0.6);
+            } 
         }
+        
     }
 }
 
