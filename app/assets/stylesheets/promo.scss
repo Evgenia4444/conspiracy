@@ -1,11 +1,20 @@
 @font-face {
     font-family: 'Gosha Regular';
-    src: url("../fonts/GoshaR.woff") format('woff');
+    src: url("fonts/GoshaR.woff") format('woff');
    }
    @font-face {
     font-family: 'Gosha Ultralight';
     src: url("fonts/GoshaU.woff") format('woff');
    }
+
+   
+.section1 {
+  position: relative;
+  margin: 0px;
+  background-color: #17031A;
+  height: 85px;
+  width: 100%;
+}
      #grid_section6 {
        position: relative;
        display: grid;
@@ -52,7 +61,7 @@
        background-size: contain;
        background-repeat: no-repeat;
      }
-     .section1 {
+     .sectionpromo1 {
        position: relative;
        margin: 0px;
        background-color: #17031A;
@@ -146,13 +155,13 @@
 
      }
      .section1_p1 {
-       font-family: Gosha Regular;
+       font-family: 'Gosha Regular';
        font-size: 48px;
        margin-top: 15px;
        color: #8CC64E;
      }
      .section1_p2 {
-       font-family: "Gosha Regular";
+       font-family: 'Gosha Regular';
        font-size: 36px;
        margin-top: 21px;
 
@@ -210,7 +219,7 @@
      .section2_p2 {
        position: relative;
        display: flex;
-       font-family: Gosha Regular;
+       font-family: 'Gosha Regular';
        /* margin-left: 31px; */
        margin-top: 0px;
        flex-wrap: wrap;
@@ -223,14 +232,14 @@
        position: relative;
        display: block;
        font-size: 144px;
-       font-family: Gosha Regular;
+       font-family: 'Gosha Regular';
        margin-left: 60px;
        top: 101px;
        color: #9A2EA9;
      }
      .section4_p1 {
        position: relative;
-       font-family: Gosha Regular;
+       font-family: 'Gosha Regular';
        font-size: 144px;
        margin-left: 60px;
        top: 390px;
@@ -241,7 +250,7 @@
      .section5_p1 {
        position: relative;
        display: flex;
-       font-family: Gosha Regular;
+       font-family: 'Gosha Regular';
        font-size: 144px;
        margin-left: 60px;
        /* top: 164px; */
@@ -268,7 +277,7 @@
      }
      .text1_p1 {
        position: relative;
-       font-family: Gosha Regular;
+       font-family: 'Gosha Regular';
        font-size: 48px;
        width: 1319px;
        color: #17031A;
@@ -282,7 +291,7 @@
      }
      .text1_p2 {
        position: relative;
-       font-family: Gosha Regular;
+       font-family: 'Gosha Regular';
        font-size: 48px;
        width: 1319px;
        color: #17031A;
@@ -306,14 +315,14 @@
      .section7_p1 {
        position: relative;
        display: flex;
-       font-family: Gosha Regular;
+       font-family: 'Gosha Regular';
        font-size: 144px;
        color: #9A2EA9;
      }
      .section8_p1 {
        position: relative;
        display: flex;
-       font-family: Gosha Regular;
+       font-family: 'Gosha Regular';
        font-size: 144px;
        margin-top: 220px;
        width: 830px;
@@ -323,7 +332,7 @@
      .section8_p2 {
        position: relative;
        display: flex;
-       font-family: Gosha Ultralight;
+       font-family: 'Gosha Ultralight';
        font-size: 36px;
        margin-top: 77px;
        width: 830px;
@@ -345,7 +354,7 @@
      .block_p1 {
        position: relative;
        display: flex;
-       font-family: Gosha Regular;
+       font-family: 'Gosha Regular';
        font-size: 48px;
        color: #17031A;
      }
@@ -365,7 +374,7 @@
      .block_p2 {
        position: relative;
        display: flex;
-       font-family: Gosha Ultralight;
+       font-family: 'Gosha Ultralight';
        font-size: 36px;
        width: 1032px;
        color: #9A2EA9;
@@ -386,7 +395,7 @@
      .knopka1_p {
        position: relative;
        display: flex;
-       font-family: Gosha Regular;
+       font-family: 'Gosha Regular';
        font-size: 48px;
        color: #9A2EA9;
      }
@@ -406,7 +415,7 @@
      .knopka2_p {
        position: relative;
        display: flex;
-       font-family: Gosha Regular;
+       font-family: 'Gosha Regular';
        font-size: 48px;
        color: #17031A;
      }

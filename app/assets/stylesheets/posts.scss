@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&display=swap';
 @import 'reset.css';
 
 
@@ -9,7 +9,7 @@
     height: 85px;
     width: 100%;
   }
-  #grid_section1 {
+  #grid_sectionposts1 {
     display: grid;
     grid-template-columns: 62% 1fr 1fr 1fr;
     grid-template-rows: 85px;
@@ -25,13 +25,13 @@
     text-align: left;
   }
 
-  .section1_p1 {
+  .sectionposts1_p1 {
     font-family: Gosha Regular;
     font-size: 48px;
     margin-top: 15px;
     color: #D82C2C;
   }
-  .section1_p2 {
+  .sectionposts1_p2 {
     font-family: Gosha Ultralight;
     font-size: 36px;
     margin-top: 21px;
@@ -42,7 +42,7 @@
       
     }
   }
-  .section1_p3 {
+  .sectionposts1_p3 {
     font-family: Gosha Regular;
     font-size: 36px;
     margin-top: 21px;
@@ -51,7 +51,7 @@
       color: #D82C2C;
     }
   }
-  .section1_p4 {
+  .sectionposts1_p4 {
     font-family: Gosha Ultralight;
     font-size: 36px;
     margin-top: 21px;
@@ -189,6 +189,7 @@
   .field {
     width: 100%;
     height: 56px;
+    margin-bottom: 24px;
      
     p{
       font-size: 18px;
@@ -199,19 +200,25 @@
       background-color: #D82C2C;
       width: 100%;
       border-radius: 2px;
+      height: 56px;
+      outline: none;
     }
   }
 
-  button {
-    text-decoration: none;
-    color: #1B1D1A;
-    font-weight: bold;
-    background: none;
-    border: none;
-    color: #1B1D1A;
-
-    &:hover {
-        color: rgba($color: #1B1D1A, $alpha: 0.6);
-    } 
+  .actions {
+    button {
+      text-decoration: none;
+      color: #1B1D1A;
+      font-weight: bold;
+      background: none;
+      border: none;
+      color: #1B1D1A;
+      background-color: #D82C2C;
+      
+  
+      &:hover {
+          color: rgba($color: #1B1D1A, $alpha: 0.6);
+      } 
+    }
   }
 }
