@@ -1,3 +1,5 @@
+<div class="form">
+
 
 <%= form_with(model: post) do |form| %>
 <% if post.errors.any? %>
@@ -27,3 +29,4 @@
 <button>Создать пост <%= form.submit %></button>
 </div>
 <% end %>
+</div>

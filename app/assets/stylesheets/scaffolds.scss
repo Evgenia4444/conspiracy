@@ -16,7 +16,11 @@ pre {
 a {
   
   text-decoration: none;
+  color: #1B1D1A;
 
+  &:hover {
+    color: rgba($color: #1B1D1A, $alpha: 0.6);
+  }
   
 }
 

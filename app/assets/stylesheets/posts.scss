@@ -174,3 +174,44 @@
 }
 
 
+
+
+.form {
+  width: 450px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  background-color: #1B1D1A;
+  margin: 50px auto;
+  border-radius: 2px;
+
+  .field {
+    width: 100%;
+    height: 56px;
+     
+    p{
+      font-size: 18px;
+      color: #D82C2C;
+    }
+
+    input {
+      background-color: #D82C2C;
+      width: 100%;
+      border-radius: 2px;
+    }
+  }
+
+  button {
+    text-decoration: none;
+    color: #1B1D1A;
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: #1B1D1A;
+
+    &:hover {
+        color: rgba($color: #1B1D1A, $alpha: 0.6);
+    } 
+  }
+}
