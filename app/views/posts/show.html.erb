@@ -11,11 +11,17 @@
   <%= @post.content %>
 </p>
 
+<% if user_signed_in? %>
 <%= link_to 'Edit', edit_post_path(@post) %> |
+<% end %>|
 <%= link_to 'Back', posts_path %>
 
 <h2>Add a comment:</h2>
-<%= render "commentts/form" %>
+<% if user_signed_in? %>
+<%= render "comments/form" %>
+<% else %>
+<p>Please <%= link_to 'login', new_user_session_path %> or <%= link_to 'register', new_user_registration_path %> to comment.</p>
+<% end %>
 
 <h2>Comments</h2>
 <%= render @post.commentts %>

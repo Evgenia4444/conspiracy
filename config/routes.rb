@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   resources :posts do
     resources :commentts
   end
   
-  get 'promo/index'
-  get 'about/index'
+  get 'promo', to: 'promo#index'
+  get 'about', to: 'about#index'
   
   get 'admin/index'
   get 'main/index'
