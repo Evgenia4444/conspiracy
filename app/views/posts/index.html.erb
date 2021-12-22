@@ -1,40 +1,35 @@
 <p id="notice"><%= notice %></p>
 
 
-<div class="section1">
-      <div id="grid_sectionposts1" class="">
-        <div class="sectionposts1_p1">квазоид</div>
-        <div class="sectionposts1_p2"><a href="/promo/index">промо</a></div>
-        <div class="sectionposts1_p3"><a href="/about/index">о нас</a></div>
-        <div class="sectionposts1_p4"><%= link_to "посты", posts_path %></div>
-      </div>
-</div>
+
 
 <section class="posts">
 <div class="posts_container">
 <button class='post_creation_action'><%= link_to 'Создать пост', new_post_path %></button>
 
 
+<% @posts.each do |post| %>
+ <div class="post_container">
+    <div class="post_data">
+      <div class="user_data">
+        <p> <%= post.name %></p>
+      </div>
+      <img src="../../assets/images/more_icon.png" alt="">
+      <p> <%= link_to 'Show', post %></p>
+      <p><%= link_to 'Edit', edit_post_path(post) %></p>
+      <p> <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    </div>
+    <div class="post_content">
+      <p><%= post.content %></p>
+     
+    </div>
 
-        <% @posts.each do |post| %>
-<div class="post">
-    <div class="post_contentFull">
-
-
-        <div class="post_additional">
-        <p>Опубликовано <%= post.created_at %></p>
-        <button><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
-        </div>
-
-        <p class='post_author'><%= post.postauthor %></p>
-        <p class='post_content'><%= post.content %></p>
-
-        <div class="post_actions">
-        <button><%= link_to 'Show', post %></button>
-        <button><%= link_to 'Edit', edit_post_path(post) %></button>
-        </div>
-
-
+        <td>
+	      <%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%>
+        </td>
+        <td>
+	<%= post.commentts.count %> <%= (post.commentts.count) == 1 ? 'Comment' : 'Comments'%>
+</td>
     </div>
 
 

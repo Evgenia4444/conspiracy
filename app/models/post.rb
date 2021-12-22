@@ -5,5 +5,6 @@ class Post < ApplicationRecord
 
     has_many :commentts, :dependent => :destroy
     has_many :tags
+    has_many :likes, dependent: :destroy
     belongs_to :user
 end

@@ -39,10 +39,7 @@
     a {
       color: #D82C2C;
 
-      &:active {
-        
-      }
-      
+    
       
     }
   }
@@ -225,4 +222,70 @@
       } 
     }
   }
+}
+
+
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.post_container {
+  width: 620px;
+  background-color: #C4C4C4;
+  padding: 21px 22px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  border-radius: 4px;
+
+}
+
+.post_data {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+}
+
+.post_content {
+  margin-top: 33px;
+  
+}
+
+.post_secondayactions {
+  margin-top: 26px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.post_container {
+  width: 620px;
+  background-color: #C4C4C4;
+  padding: 21px 22px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  border-radius: 4px;
+
+}
+
+.post_data {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+}
+
+.post_content {
+  margin-top: 33px;
+  
+}
+
+.post_secondayactions {
+  margin-top: 26px;
+  display: flex;
+  justify-content: space-between;
+
 }

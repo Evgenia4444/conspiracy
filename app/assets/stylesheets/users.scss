@@ -1,0 +1,64 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.userpage_header {
+    width: 1200px;
+    background-color: #EFEFEF;
+    height: 250px;
+    display: flex;
+    padding: 20px 215px;
+
+
+    .userpage_icon {
+        border-radius: 100px;
+        background-color: pink;
+        width: 200px;
+        height: 200px;
+        margin-right: 40px;
+    }
+
+    &_data {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+
+    }
+    
+}
+
+
+.user_nameandaction {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+
+}
+
+.userpage_statistics {
+    display: flex;
+    padding: 20px;
+    width: 120px;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+        background-color: #c4c4c4;
+        padding: 22px 36px;
+        border-radius: 20px;
+        border: none;
+        color: black;
+        cursor: pointer;
+        margin-right: 60px;
+        
+
+        &:active,
+        &:focus {
+            color: black;
+        }
+    }
+
+    p {
+        margin-right: 60px;
+    }
+}

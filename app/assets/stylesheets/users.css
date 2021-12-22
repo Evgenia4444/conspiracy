@@ -1,0 +1,72 @@
+.userpage_header {
+  width: 1200px;
+  background-color: #EFEFEF;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 215px;
+}
+
+.userpage_header .userpage_icon {
+  border-radius: 100px;
+  background-color: pink;
+  width: 200px;
+  height: 200px;
+  margin-right: 40px;
+}
+
+.userpage_header_data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 50px;
+}
+
+.user_nameandaction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.userpage_statistics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  width: 120px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.userpage_statistics button {
+  background-color: #c4c4c4;
+  padding: 22px 36px;
+  border-radius: 20px;
+  border: none;
+  color: black;
+  cursor: pointer;
+  margin-right: 60px;
+}
+
+.userpage_statistics button:active, .userpage_statistics button:focus {
+  color: black;
+}
+
+.userpage_statistics p {
+  margin-right: 60px;
+}
+/*# sourceMappingURL=users.css.map */
