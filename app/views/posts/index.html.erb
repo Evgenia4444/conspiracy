@@ -1,31 +1,46 @@
 
 
-<div class="posts">
+<div class="postspage">
+  <div class="postspage_header">
 
+      <h2>Все посты</h2>
 
-<div class="posts_container">
+      <%= link_to 'Создать пост', new_post_path, :class => 'createpost_btn' %>
+  </div>
+<div class="postspage_container">
+  
 
 <% @posts.each do |post| %>
  <div class="post_container">
     <div class="post_data">
       <div class="user_data">
-        
+        <p><%= post.user.username %></p>
       </div>
-      <img src="../../assets/images/more_icon.png" alt="">
-      <p><%= link_to 'Редактировать', edit_post_path(post) %></p>
-      <p> <%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены, что хотите удалить пост?' } %></p>
+
+      <div class="post_actions">
+      <%= link_to 'Редактировать', edit_post_path(post) %>
+        
+       <%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены, что хотите удалить пост?' } %>
+      </div>
     </div>
     <div class="post_content">
       <p><%= post.content %></p>
       <%= image_tag(post.image.url, alt: 'Image') if post.image? %>
     </div>
 
-        <td>
-	      <%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%>
-        </td>
-        <td>
-	<%= post.commentts.count %> <%= (post.commentts.count) == 1 ? 'Comment' : 'Comments'%>
-</td>
+      <div class="post_secondary">
+
+            <p><%= post.category.name %></p>
+
+            <div class="like_actions">
+              <td>
+              <%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%>
+              </td>
+              <td>
+         <%= post.commentts.count %> <%= (post.commentts.count) == 1 ? 'Comment' : 'Comments'%>
+         </td>
+            </div>
+      </div>
     </div>
 
 
@@ -44,8 +59,14 @@
 
 
         <% end %>
-    <%= link_to 'Создать пост', new_post_path, :class => 'createpost_btn' %>
     
+    
+    <% Category.all.each do |cat| %>
+  <div class="categories_list">
+    <%= link_to cat.name, posts_path(category: cat.name), :class => 'category_btn' %> <br>
+  <% end %>
+  </div>
+
 </div>
 
 </div>

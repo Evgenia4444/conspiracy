@@ -21,7 +21,10 @@
 <%= link_to 'Редактировать', edit_post_path(@post) %> |
 <% end %>|
 <%= link_to 'Назад', posts_path %>
-
+<p>
+  <strong>Category:</strong>
+  <%= @post.category.name %>
+</p>
 <div class="post_actions">
     <div class="comments">
       <img src="../../assets/images/comment.png" alt="">

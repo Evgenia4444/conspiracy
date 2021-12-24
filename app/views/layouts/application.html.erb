@@ -13,6 +13,7 @@
   </head>
 
   <body>
+  
   <div class="top-menu">
 
       <div class="navbar_actions">
@@ -42,11 +43,6 @@
   <%= link_to 'Пользователи', users_path %> 
 </div>
 
-    <% if notice %>
-  <p class="notice"><%= notice %></p>
-<% elsif alert %>
-  <p class="alert"><%= alert %></p>
-<% end %>
 <%= yield %>
   </div>
 

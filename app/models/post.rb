@@ -8,4 +8,5 @@ class Post < ApplicationRecord
     has_many :likes, dependent: :destroy
     belongs_to :user
     mount_uploader :image, ImageUploader
+    belongs_to :category
 end

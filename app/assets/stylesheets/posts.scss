@@ -6,17 +6,17 @@
 
 
   
-.posts{
+.postspage{
     background-color: white;
     display: flex;
      height: 100vh;
      width: 100%;
-     padding: 40px 100px;
+     padding: 40px 0px;
      font-family: 'Open Sans', sans-serif;
      
    &_container {
     width: 60%;
-      padding: 40px 60px;
+      
 
        .post_creation_action {
            float: right;
@@ -84,7 +84,7 @@
     &_actions {
         text-decoration: none;
         float: right;
-        width: 100px;
+        
         display: flex;
         justify-content: space-between;
         font-size: 14px;
@@ -123,15 +123,118 @@
 
 
 
+
+
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.postspage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  background: #DDD9D9;
+  padding: 20px 28px;
+  border-radius: 20px;
+
+  .createpost_btn {
+     float: right;
+     max-width: 100px;
+     margin-bottom: 10px;
+     background: #EFEFEF;
+  }
+}
+.postspage_container {
+  width: 100%;
+  display: flex;
+
+}
+
+
+
+.post_content {
+  margin-top: 33px;
+
+  img {
+    margin-top: 14px;
+    max-width: 300px;
+  }
+  
+}
+
+
+
+.post_container {
+  width: 620px;
+  background-color: #EFEFEF;
+  padding: 21px 22px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  border-radius: 6px;
+  
+
+}
+
+.post_data {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  
+  p {
+    font-size: 26px;
+    margin: 0;
+    font-weight: bold;
+  }
+ a {
+   margin-left: 10px;
+   color: black;
+ }
+
+
+}
+
+.post_content {
+  margin-top: 33px;
+  
+}
+
+
+
+.post_secondary {
+  margin-top: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+    p {
+     background: #020303;
+     padding: 12px 20px;
+     border-radius: 4px;
+     color: #ffffff;
+    }
+  
+
+}
+
+
+
+
+
+// form
+
 .form {
-  width: 450px;
-  height: 400px;
+  width: 650px;
+  height: auto;
   display: flex;
   flex-direction: column;
   padding: 20px 40px;
-  background-color: #1B1D1A;
+  background-color: #EFEFEF;
   margin: 50px auto;
   border-radius: 2px;
+  border-radius: 16px;
 
   .field {
     width: 100%;
@@ -139,8 +242,9 @@
     margin-bottom: 24px;
      
     p{
-      font-size: 18px;
-      color: #D82C2C;
+      font-size: 22px;
+      color: #020303;
+
     }
 
     input {
@@ -153,14 +257,10 @@
   }
 
   .actions {
-    button {
-      text-decoration: none;
-      color: #1B1D1A;
-      font-weight: bold;
-      background: none;
-      border: none;
-      color: #1B1D1A;
-      background-color: #D82C2C;
+    .submitcreate_btn {
+      background: #020303;
+      padding: 16px 22px;
+    }
 
   
       &:hover {
@@ -168,76 +268,38 @@
       } 
     }
   }
-}
 
-
-// Place all the styles related to the Posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
-
-
-.posts_container {
+.content_input {
   width: 100%;
-
-
-}
-
-.post_data {
-  display: flex;
-  justify-content: end;
-  width: 100%;
-
-}
-
-.post_content {
-  margin-top: 33px;
-
-  img {
-    margin-top: 14px;
-    max-width: 300px;
-  }
   
 }
 
-.post_secondayactions {
-  margin-top: 26px;
+
+.postspage_header {
   display: flex;
   justify-content: space-between;
-
+  width: 100%;
+  align-items: center;
+ 
 }
+// categories
 
-.post_container {
-  width: 620px;
-  background-color: #C4C4C4;
-  padding: 21px 22px;
+.categories_list {
+  justify-content: end;
+  max-height: 196px;
+  align-items: center;
+}
+.categories_header {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 40px;
+    flex-direction: column;
+    width: 400px;
+}
+.category_btn {
+  background-color: #E2E2E2;
+  padding: 8px 18px;
+  max-height: 32px;
+  outline: none;
   border-radius: 4px;
-
-}
-
-.post_data {
-  display: flex;
-  justify-content: end;
-  width: 100%;
- a {
-   margin-left: 10px;
-   color: black;
- }
-}
-
-.post_content {
-  margin-top: 33px;
+  color: black;
   
 }
-
-.post_secondayactions {
-  margin-top: 26px;
-  display: flex;
-  justify-content: space-between;
-
-}
-
-
-
