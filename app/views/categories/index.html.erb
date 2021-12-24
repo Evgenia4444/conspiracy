@@ -1,19 +1,25 @@
 
 
+<div class="categories_div">
 
- <div class="categories">
+
+     
+    
+
+    <div class="categoriespage_container">
+
+    <% Category.all.each do |cat| %>
   
-    <h2>Категории</h2>
-
-    <div class="categories_header">
-    <p>Название</p>
-    <p>Название</p>
-    </div>
-  <% Category.all.each do |cat| %>
-  <div class="categories_list">
+    <div class="category_name">
     <%= link_to cat.name, posts_path(category: cat.name), :class => 'category_btn' %> <br>
-  <% end %>
-  </div>
-  
-     <%= link_to 'New Category', new_category_path, :class => 'createcategory_btn' %>
+    
+    
+    
     </div>
+  <% end %>
+
+    <%= link_to 'Добавить категорию', new_category_path, :class => 'createcategory_btn' %>
+</div>
+</div>
+
+  

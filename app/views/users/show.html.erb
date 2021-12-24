@@ -4,6 +4,7 @@
     
 
         <div class="userpage_icon">
+          <%= image_tag(@user.userpick.url, alt: 'Image') if @user.userpick? %>
           
         </div>
     <div class="userpage_header_data">
@@ -11,7 +12,8 @@
         <% if user_signed_in? && current_user.isadmin == true %>
     <p>Admin <%= @user.isadmin %></p>
     <% end %>
-            <p> <%= @user.username %></p>
+            <p class='userheader_username'> <%= @user.username %></p>
+            
             <% if user_signed_in? && @user.id == current_user.id %>
             <%= link_to 'Редактировать профиль', edit_user_registration_path %>
              <% end%>

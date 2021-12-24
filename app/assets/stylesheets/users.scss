@@ -4,7 +4,7 @@
 
 .userpage_header {
     width: 1200px;
-    background-color: #EFEFEF;
+    
     height: 250px;
     display: flex;
     padding: 20px 215px;
@@ -16,6 +16,7 @@
         width: 200px;
         height: 200px;
         margin-right: 40px;
+        overflow: hidden;
     }
 
     &_data {
@@ -33,11 +34,14 @@
     flex-direction: column;
     margin-bottom: 40px;
 
+    a {
+        color: black;
+    }
+
 }
 
 .userpage_statistics {
     display: flex;
-    padding: 20px;
     width: 600px;
     justify-content: space-between;
     align-items: center;
@@ -65,7 +69,7 @@
 
 
 .users_container {
-    background-color: rgb(223, 167, 167);
+    background-color: #EFEFEF;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
@@ -79,9 +83,10 @@
     display: flex;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    padding: 20px 60px;
+    padding: 0 60px 20px;
     background: #1a1919;
     color: white;
+    align-items: center;
 
     p {
         
@@ -101,4 +106,10 @@
             width: 200px;
         }
     }
+}
+
+
+.userheader_username {
+    font-size: 32px;
+    font-weight: bold;
 }

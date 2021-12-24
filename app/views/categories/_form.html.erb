@@ -1,3 +1,5 @@
+<div class="categories_form">
+
 <%= form_with(model: category) do |form| %>
   <% if category.errors.any? %>
     <div id="error_explanation">
@@ -11,17 +13,18 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form_field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, :class => 'category_btn' %>
   </div>
 
-  <div class="field">
+  <div class="form_field">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, :class => 'category_btn' %>
   </div>
 
-  <div class="actions">
+  <div class="form_btn">
     <%= form.submit %>
   </div>
 <% end %>
+</div>

@@ -17,15 +17,16 @@
   <div class="top-menu">
 
       <div class="navbar_actions">
-     <%= link_to 'Квазоид', new_user_session_path, :class => 'logo' %>
+    <div class="navbar_logo"><%= link_to 'k', new_user_session_path, :class => 'logo' %></div> 
+     
       <% if user_signed_in? %>
 
       <div class="navbar_links">
-        <div class='myaccount_icon'></div>
+        
        <%= link_to 'Мой аккаунт', current_user, :class => 'myaccount_link' %> <%= link_to 'Выйти', destroy_user_session_path, method: :delete, :class => 'exit_link' %>
       <% else %>
-        <%= link_to 'Sign In', new_user_session_path, :class => 'signin_btn' %> 
-        <%= link_to 'Sign Up', new_user_registration_path, :class => 'signup_btn' %>
+        <%= link_to 'Войти', new_user_session_path, :class => 'signin_btn' %> 
+        <%= link_to 'Зарегистрироваться', new_user_registration_path, :class => 'signup_btn' %>
       </div>
       <% end %>
       </div>
@@ -35,14 +36,14 @@
   </div>
 </div>
 <div class="website_content">
-  
-<div class="sidenavbar">
-  <%= link_to 'Посты', posts_path %> 
-  <%= link_to 'Категории', categories_path %> 
-  <%= link_to 'Комментарии', new_user_session_path %> 
-  <%= link_to 'Пользователи', users_path %> 
-</div>
 
+  <% if user_signed_in? && current_user.isadmin == true %>
+    <div class="sidenavbar">
+      <%= link_to 'Посты', posts_path %> 
+      <%= link_to 'Категории', categories_path %> 
+      <%= link_to 'Пользователи', users_path %> 
+    </div>
+  <% end %>
 <%= yield %>
   </div>
 

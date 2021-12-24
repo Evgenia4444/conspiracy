@@ -1,24 +1,33 @@
 
 
-<div class="postspage">
-  <div class="postspage_header">
 
-      <h2>Все посты</h2>
+    
+
+
+
+    
+<% if user_signed_in? && current_user.isadmin == true %>
+<div class="postspage">
+ 
+
+     
 
       <%= link_to 'Создать пост', new_post_path, :class => 'createpost_btn' %>
-  </div>
+ 
 <div class="postspage_container">
   
+<div class="postsfeed">
 
 <% @posts.each do |post| %>
  <div class="post_container">
     <div class="post_data">
       <div class="user_data">
-        <p><%= post.user.username %></p>
+        <%= link_to post.user.username, user_path(post.user), :class => 'user_username'%>
       </div>
 
       <div class="post_actions">
       <%= link_to 'Редактировать', edit_post_path(post) %>
+      <%= link_to 'Смотреть пост', post  %>
         
        <%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены, что хотите удалить пост?' } %>
       </div>
@@ -30,10 +39,17 @@
 
       <div class="post_secondary">
 
-            <p><%= post.category.name %></p>
+            <p class='category_name'><%= link_to post.category.name, posts_path(category: post.category.name) %></p>
 
             <div class="like_actions">
+            
               <td>
+               <% pre_like = post.likes.find { |like| like.user_id == current_user.id} %>
+              <% if pre_like %>
+                <%= button_to 'Unlike', post_like_path(post, pre_like), method: :delete %>
+              <% else %>
+                <%= button_to 'Like', post_likes_path(post), method: :post %>
+              <% end %>
               <%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%>
               </td>
               <td>
@@ -59,6 +75,7 @@
 
 
         <% end %>
+</div>
     
     
     <% Category.all.each do |cat| %>
@@ -70,8 +87,79 @@
 </div>
 
 </div>
+
+
+
+
+
+
+   <% elsif  %>
+
+
+
+<div class="postspage_notadmin">
    
-</section>
+ 
+<div class="postspage_container">
+  
+
+<% @posts.each do |post| %>
+ <div class="post_container userpost_container">
+    <div class="post_data">
+      <div class="user_data">
+        <p><%= post.user.username %></p>
+      </div>
+
+      <div class="post_actions">
+      <% if user_signed_in? && current_user.isadmin == true %>
+<%= link_to 'Редактировать', edit_post_path(@post) %> |
+        
+       <%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены, что хотите удалить пост?' } %>
+<% end %>
+      </div>
+    </div>
+    <div class="post_content">
+      <p><%= post.content %></p>
+      <%= image_tag(post.image.url, alt: 'Image') if post.image? %>
+    </div>
+
+      <div class="post_secondary">
+
+            <p><%= post.category.name %></p>
+
+            <div class="like_actions">
+              <td>
+              <%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%>
+              </td>
+              <td>
+         <%= post.commentts.count %> <%= (post.commentts.count) == 1 ? 'Comment' : 'Comments'%>
+         </td>
+            </div>
+      </div>
+
+
+    <%# <div class="comments">
+
+    <div class="comments_action">
+        <%# <%= render "commentts/form" %> 
+        <%# <button class="comment_publish"></button>
+    </div> %>
+
+    <%# <div class="comments_list">
+        
+    </div>
+
+    </div>  %>
+
+
+        <% end %>
+
+
+    </div>
+        <%= link_to 'Создать пост', new_post_path, :class => 'createpost_btn' %>
+
+
+<% end %>
 
 
 

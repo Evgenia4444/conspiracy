@@ -22,17 +22,17 @@
         <% end %>
 
 
-        <div class="field">
+        <div class="registrationfield">
         <p>Текст поста <%= form.label :content %></p>
         <%= form.text_area :content, :class => 'content_input' %>
         </div>
 
-        <div class="field">
+        <div class="registrationfield">
             <%= form.label :category_id %>
             <%= form.select :category_id, Category.pluck(:name, :id) %>
         </div>
 
-        <div>
+        <div class='registrationfield'>
             <%= form.label :image %>
             <%= form.file_field :image %>
         </div>
