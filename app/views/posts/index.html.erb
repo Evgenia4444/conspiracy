@@ -1,27 +1,23 @@
-<p id="notice"><%= notice %></p>
 
 
+<div class="posts">
 
 
-<section class="posts">
 <div class="posts_container">
-<button class='post_creation_action'><%= link_to 'Создать пост', new_post_path %></button>
-
 
 <% @posts.each do |post| %>
  <div class="post_container">
     <div class="post_data">
       <div class="user_data">
-        <p> <%= post.name %></p>
+        
       </div>
       <img src="../../assets/images/more_icon.png" alt="">
-      <p> <%= link_to 'Show', post %></p>
-      <p><%= link_to 'Edit', edit_post_path(post) %></p>
-      <p> <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      <p><%= link_to 'Редактировать', edit_post_path(post) %></p>
+      <p> <%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены, что хотите удалить пост?' } %></p>
     </div>
     <div class="post_content">
       <p><%= post.content %></p>
-     
+      <%= image_tag(post.image.url, alt: 'Image') if post.image? %>
     </div>
 
         <td>
@@ -47,10 +43,14 @@
     </div>  %>
 
 
-</div>
         <% end %>
+    <%= link_to 'Создать пост', new_post_path, :class => 'createpost_btn' %>
+    
+</div>
 
 </div>
+   
 </section>
+
 
 

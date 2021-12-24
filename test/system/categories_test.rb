@@ -15,7 +15,6 @@ class CategoriesTest < ApplicationSystemTestCase
     click_on "New Category"
 
     fill_in "Description", with: @category.description
-    check "Display in navbar" if @category.display_in_navbar
     fill_in "Name", with: @category.name
     click_on "Create Category"
 
@@ -28,7 +27,6 @@ class CategoriesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Description", with: @category.description
-    check "Display in navbar" if @category.display_in_navbar
     fill_in "Name", with: @category.name
     click_on "Update Category"
 

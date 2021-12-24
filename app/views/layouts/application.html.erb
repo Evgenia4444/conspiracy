@@ -14,16 +14,32 @@
 
   <body>
   <div class="top-menu">
-    <h3 class='logo'>Квазоид</h3>
+
       <div class="navbar_actions">
-        <div class='myaccount_icon'>
+     <%= link_to 'Квазоид', new_user_session_path, :class => 'logo' %>
       <% if user_signed_in? %>
-        <p><%= link_to 'Мой аккаунт', current_user %> | <%= link_to 'Выйти', destroy_user_session_path, method: :delete %></p></div>
+
+      <div class="navbar_links">
+        <div class='myaccount_icon'></div>
+       <%= link_to 'Мой аккаунт', current_user, :class => 'myaccount_link' %> <%= link_to 'Выйти', destroy_user_session_path, method: :delete, :class => 'exit_link' %>
       <% else %>
-        <button class='signin_button'><%= link_to 'Sign In', new_user_session_path %></button> 
-        <button class='signup_button'><%= link_to 'Sign Up', new_user_registration_path %></button>
+        <%= link_to 'Sign In', new_user_session_path, :class => 'signin_btn' %> 
+        <%= link_to 'Sign Up', new_user_registration_path, :class => 'signup_btn' %>
       </div>
       <% end %>
+      </div>
+  <div class="topnavbar">
+  
+  
+  </div>
+</div>
+<div class="website_content">
+  
+<div class="sidenavbar">
+  <%= link_to 'Посты', posts_path %> 
+  <%= link_to 'Категории', categories_path %> 
+  <%= link_to 'Комментарии', new_user_session_path %> 
+  <%= link_to 'Пользователи', users_path %> 
 </div>
 
     <% if notice %>
@@ -32,5 +48,8 @@
   <p class="alert"><%= alert %></p>
 <% end %>
 <%= yield %>
+  </div>
+
+
   </body>
 </html>

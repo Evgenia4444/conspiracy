@@ -38,7 +38,7 @@
 .userpage_statistics {
     display: flex;
     padding: 20px;
-    width: 120px;
+    width: 600px;
     justify-content: space-between;
     align-items: center;
 
@@ -60,5 +60,45 @@
 
     p {
         margin-right: 60px;
+    }
+}
+
+
+.users_container {
+    background-color: rgb(223, 167, 167);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    width: 100%;
+    
+
+
+}
+
+.users_header {
+    display: flex;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px 60px;
+    background: #1a1919;
+    color: white;
+
+    p {
+        
+        width: 200px;
+    }
+}
+
+.users_section {
+    padding: 20px 60px;
+
+    .user_info {
+       
+        display: flex;
+        
+    
+        p {
+            width: 200px;
+        }
     }
 }

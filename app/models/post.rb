@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-    validates :postauthor, :presence => true
+  
     validates :content, :presence => true,
                                         :length => { :minimum => 5 }
 
@@ -7,4 +7,5 @@ class Post < ApplicationRecord
     has_many :tags
     has_many :likes, dependent: :destroy
     belongs_to :user
+    mount_uploader :image, ImageUploader
 end

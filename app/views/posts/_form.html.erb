@@ -14,15 +14,15 @@
 </div>
 <% end %>
 
-<div class="field">
-<p>Автор <%= form.label :postauthor %></p>
-<%= form.text_field :postauthor %>
-</div>
-
 
 <div class="field">
 <p>Текст поста <%= form.label :content %></p>
 <%= form.text_area :content %>
+</div>
+
+<div>
+	<%= form.label :image %>
+	<%= form.file_field :image %>
 </div>
 
 <div class="actions">

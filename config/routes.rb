@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :follows
   resources :categories
+  resources :follows
   devise_for :users
   resources :posts do
     resources :commentts

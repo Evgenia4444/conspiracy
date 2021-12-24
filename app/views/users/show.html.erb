@@ -11,15 +11,15 @@
         <% if user_signed_in? && current_user.isadmin == true %>
     <p>Admin <%= @user.isadmin %></p>
     <% end %>
-            <p> <% @user.username %></p>
+            <p> <%= @user.username %></p>
             <% if user_signed_in? && @user.id == current_user.id %>
             <%= link_to 'Редактировать профиль', edit_user_registration_path %>
              <% end%>
         </div>
         <div class="userpage_statistics">
-           <% if user_signed_in? && user = current_user && current_user.followees.include?(@user) %>
+           <% if user_signed_in?  && current_user.followees.include?(@user) %>
             <button><%= link_to "Unfollow", unfollow_user_path, method: "POST" %></button>
-            <% elsif user_signed_in? %>
+            <% elsif user_signed_in? && @user != current_user %>
              <button><%= link_to "Follow", follow_user_path, method: "POST" %></button>
             <% end%>
             <p>Подписчики <%= @user.followers.count %> </p>

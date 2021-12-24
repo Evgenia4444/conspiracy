@@ -2,74 +2,20 @@
 @import 'reset.css';
 
 
-.section1 {
-    position: relative;
-    margin: 0px;
-    background-color: #1B1D1A;
-    height: 85px;
-    width: 100%;
-  }
-  #grid_sectionposts1 {
-    display: grid;
-    grid-template-columns: 62% 1fr 1fr 1fr;
-    grid-template-rows: 85px;
-    grid-gap: 52px;
-    margin-left: 60px;
-    margin-right: 60px;
-    margin-top: 0px;
-    margin-bottom: 0px
-  }
-  #grid > div {
-    padding: 0px;
-    /* background: gold; */
-    text-align: left;
-  }
 
-  .sectionposts1_p1 {
-    font-family: Gosha Regular;
-    font-size: 48px;
-    margin-top: 15px;
-    color: #D82C2C;
-  }
-  .sectionposts1_p2 {
-    font-family: Gosha Ultralight;
-    font-size: 36px;
-    margin-top: 21px;
-    
-    a {
-      color: #D82C2C;
 
-    
-      
-    }
-  }
-  .sectionposts1_p3 {
-    font-family: Gosha Ultralight;
-    font-size: 36px;
-    margin-top: 21px;
-    
-    a {
-      color: #D82C2C;
-    }
-  }
-  .sectionposts1_p4 {
-    font-family: Gosha Regular;
-    font-size: 36px;
-    margin-top: 21px;
-    
-    a {
-      color: #D82C2C;
-    }
-  }
 
   
 .posts{
-    background-color: #292929;
-     height: 100%;
+    background-color: white;
+    display: flex;
+     height: 100vh;
      width: 100%;
+     padding: 40px 100px;
      font-family: 'Open Sans', sans-serif;
      
    &_container {
+    width: 60%;
       padding: 40px 60px;
 
        .post_creation_action {
@@ -230,26 +176,26 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
-.post_container {
-  width: 620px;
-  background-color: #C4C4C4;
-  padding: 21px 22px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 40px;
-  border-radius: 4px;
+.posts_container {
+  width: 100%;
+
 
 }
 
 .post_data {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   width: 100%;
 
 }
 
 .post_content {
   margin-top: 33px;
+
+  img {
+    margin-top: 14px;
+    max-width: 300px;
+  }
   
 }
 
@@ -273,9 +219,12 @@
 
 .post_data {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   width: 100%;
-
+ a {
+   margin-left: 10px;
+   color: black;
+ }
 }
 
 .post_content {
@@ -289,3 +238,6 @@
   justify-content: space-between;
 
 }
+
+
+

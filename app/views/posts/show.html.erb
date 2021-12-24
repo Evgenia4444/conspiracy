@@ -16,7 +16,7 @@
  
   <%= @post.content %>
 </p>
-
+<%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
 <% if user_signed_in? %>
 <%= link_to 'Редактировать', edit_post_path(@post) %> |
 <% end %>|
@@ -24,7 +24,7 @@
 
 <div class="post_actions">
     <div class="comments">
-      <img src="" alt="">
+      <img src="../../assets/images/comment.png" alt="">
       <p>
 
       </p>
