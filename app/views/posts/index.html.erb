@@ -27,7 +27,7 @@
 
       <div class="post_actions">
       <%= link_to 'Редактировать', edit_post_path(post) %>
-      <%= link_to 'Смотреть пост', post  %>
+      
         
        <%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены, что хотите удалить пост?' } %>
       </div>
@@ -46,9 +46,9 @@
               <td>
                <% pre_like = post.likes.find { |like| like.user_id == current_user.id} %>
               <% if pre_like %>
-                <%= button_to 'Unlike', post_like_path(post, pre_like), method: :delete %>
+                <%= button_to 'Unlike', post_like_path(post, pre_like), method: :delete, :class => 'like_btn' %>
               <% else %>
-                <%= button_to 'Like', post_likes_path(post), method: :post %>
+                <%= button_to 'Like', post_likes_path(post), method: :post, :class => 'like_btn' %>
               <% end %>
               <%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%>
               </td>
@@ -114,7 +114,7 @@
       <% if user_signed_in? && current_user.isadmin == true %>
 <%= link_to 'Редактировать', edit_post_path(@post) %> |
         
-       <%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены, что хотите удалить пост?' } %>
+       <%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены, что хотите удалить пост?' }, :class => 'like_btn' %>
 <% end %>
       </div>
     </div>

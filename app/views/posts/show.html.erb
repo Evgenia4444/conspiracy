@@ -1,52 +1,58 @@
-<p id="notice"><%= notice %></p>
 
-<div class="post_header">
-  <div class="user_info">
-    <div class="icon">
+<div class="post_container">
+    <div class="post_data">
+      <div class="user_data">
+        <%= link_to @post.user.username, user_path(@post.user), :class => 'user_username'%>
+      </div>
+
+      <div class="post_actions">
+      <%= link_to 'Редактировать', edit_post_path(@post) %>
+        
+       <%= link_to 'Удалить', @post, method: :delete, data: { confirm: 'Вы уверены, что хотите удалить пост?' } %>
+      <%= link_to 'Назад', posts_path %>
+      </div>
     </div>
-    <p>
-      <%= @post.postauthor %>
-    </p>
-  </div>
-  <img src="../../assets/icon_more.png" alt="">
+    <div class="post_content">
+      <p><%= @post.content %></p>
+      <%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
+    </div>
+
+      <div class="post_secondary">
+
+            <p class='category_name'><%= link_to @post.category.name, posts_path(category: @post.category.name) %></p>
+
+            <div class="like_actions">
+            
+              <td>
+               <% pre_like = @post.likes.find { |like| like.user_id == current_user.id} %>
+              <% if pre_like %>
+                <%= button_to 'Unlike', post_like_path(@post, pre_like), method: :delete, :class => 'like_btn' %>
+              <% else %>
+                <%= button_to 'Like', post_likes_path(@post), method: :post, :class => 'like_btn' %>
+              <% end %>
+              <%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes'%>
+              </td>
+              <td>
+         <%= @post.commentts.count %> <%= (@post.commentts.count) == 1 ? 'Comment' : 'Comments'%>
+         </td>
+            </div>
+      </div>
+    </div>
+
+
+    <%# <div class="comments">
+
+    <div class="comments_action">
+        <%# <%= render "commentts/form" %> 
+        <%# <button class="comment_publish"></button>
+    </div> %>
+
+    <%# <div class="comments_list">
+        
+    </div>
+
+    </div>  %>
+
+
+        
 </div>
-
-
-<p>
- 
-  <%= @post.content %>
-</p>
-<%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
-<% if user_signed_in? %>
-<%= link_to 'Редактировать', edit_post_path(@post) %> |
-<% end %>|
-<%= link_to 'Назад', posts_path %>
-<p>
-  <strong>Category:</strong>
-  <%= @post.category.name %>
-</p>
-<div class="post_actions">
-    <div class="comments">
-      <img src="../../assets/images/comment.png" alt="">
-      <p>
-
-      </p>
-    </div>
-    <div class="like_action">
-      <%= button_to 'Like', post_likes_path(@post), method: :post %>
-      <p><%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes'%></p>
-    </div>
-    <div class="pal_action">
-    <p><%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes'%></p>
-    </div>
-    
-</div>
-
-<h2>Add a comment:</h2>
-<% if user_signed_in? %>
-<%= render "commentts/form" %>
-<% else %>
-<p>Please <%= link_to 'login', new_user_session_path %> or <%= link_to 'register', new_user_registration_path %> to comment.</p>
-<% end %>
-
-
