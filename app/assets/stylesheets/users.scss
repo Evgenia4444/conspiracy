@@ -7,7 +7,7 @@
     
     height: 250px;
     display: flex;
-    padding: 20px 215px;
+    
 
 
     .userpage_icon {
@@ -17,6 +17,11 @@
         height: 200px;
         margin-right: 40px;
         overflow: hidden;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
     }
 
     &_data {
@@ -42,7 +47,6 @@
 
 .userpage_statistics {
     display: flex;
-    width: 600px;
     justify-content: space-between;
     align-items: center;
 
